@@ -13,7 +13,7 @@ export class HomePage {
 
   async ngAfterViewInit(){
     const loader = new Loader({
-      apiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
+      apiKey: "API_KEY",
       version: "weekly",
     });
 
