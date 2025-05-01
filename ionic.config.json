@@ -1,7 +1,0 @@
-{
-  "name": "lobster-roll",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
