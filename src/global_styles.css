@@ -1,0 +1,369 @@
+/* Global Styles for Lobster Roll Finder */
+
+/* CSS Variables for Design System */
+:root {
+  /* Primary Colors - Lobster/Seafood Reds */
+  --primary-50: #fcf0f1;
+  --primary-100: #fad1d4;
+  --primary-200: #f7a3a9;
+  --primary-300: #f2757e;
+  --primary-400: #ee4753;
+  --primary-500: #e63946; /* Main primary color */
+  --primary-600: #cd2230;
+  --primary-700: #b41c28;
+  --primary-800: #9b1521;
+  --primary-900: #820f1a;
+
+  /* Secondary Colors - Ocean Blues */
+  --secondary-50: #edf6fa;
+  --secondary-100: #d0e7f2;
+  --secondary-200: #a1cfe5;
+  --secondary-300: #73b7d8;
+  --secondary-400: #4499c7;
+  --secondary-500: #457b9d; /* Main secondary color */
+  --secondary-600: #3a678a;
+  --secondary-700: #2e5476;
+  --secondary-800: #234163;
+  --secondary-900: #172e4f;
+
+  /* Accent Colors - Butter Yellows */
+  --accent-50: #fefdf0;
+  --accent-100: #fcfad5;
+  --accent-200: #f9f4aa;
+  --accent-300: #f7ee80;
+  --accent-400: #f4e855;
+  --accent-500: #f1e22a;
+  --accent-600: #d9c922;
+  --accent-700: #c1b11b;
+  --accent-800: #a99813;
+  --accent-900: #91800c;
+
+  /* Success Colors - Greens */
+  --success-50: #edf7ed;
+  --success-100: #d0ecd0;
+  --success-200: #a2d8a2;
+  --success-300: #74c474;
+  --success-400: #46b046;
+  --success-500: #2d9c2d; /* Main success color */
+  --success-600: #248424;
+  --success-700: #1b6c1b;
+  --success-800: #135513;
+  --success-900: #0b3d0b;
+
+  /* Warning Colors - Oranges */
+  --warning-50: #fdf6ee;
+  --warning-100: #faebca;
+  --warning-200: #f6d695;
+  --warning-300: #f2c260;
+  --warning-400: #eeaf2b;
+  --warning-500: #e9a11a; /* Main warning color */
+  --warning-600: #d08716;
+  --warning-700: #b86e12;
+  --warning-800: #9f550e;
+  --warning-900: #863c0a;
+
+  /* Error Colors - Reds */
+  --error-50: #fdeded;
+  --error-100: #fad0d0;
+  --error-200: #f7a1a1;
+  --error-300: #f27171;
+  --error-400: #ee4242;
+  --error-500: #e91313; /* Main error color */
+  --error-600: #cc1111;
+  --error-700: #b00e0e;
+  --error-800: #930c0c;
+  --error-900: #770909;
+
+  /* Neutral Colors - Sandy & Grays */
+  --neutral-50: #f1faee; /* Main background */
+  --neutral-100: #e8f4e8;
+  --neutral-200: #d4e9d4;
+  --neutral-300: #b9d9b9;
+  --neutral-400: #9fc89f;
+  --neutral-500: #84b784;
+  --neutral-600: #69a669;
+  --neutral-700: #4e844e;
+  --neutral-800: #3d673d;
+  --neutral-900: #2c4a2c;
+
+  /* Base text colors */
+  --text-dark: #1d3557;
+  --text-light: #ffffff;
+  --text-muted: #718096;
+
+  /* Spacing system (8px grid) */
+  --space-1: 0.5rem; /* 8px */
+  --space-2: 1rem;   /* 16px */
+  --space-3: 1.5rem; /* 24px */
+  --space-4: 2rem;   /* 32px */
+  --space-5: 2.5rem; /* 40px */
+  --space-6: 3rem;   /* 48px */
+
+  /* Border radius */
+  --radius-sm: 0.25rem; /* 4px */
+  --radius-md: 0.5rem;  /* 8px */
+  --radius-lg: 1rem;    /* 16px */
+  --radius-xl: 1.5rem;  /* 24px */
+
+  /* Box shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Font settings */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+
+  /* Line heights */
+  --line-height-tight: 1.2;  /* 120% for headings */
+  --line-height-normal: 1.5; /* 150% for body text */
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Z-index layers */
+  --z-base: 1;
+  --z-menu: 10;
+  --z-modal: 20;
+  --z-tooltip: 30;
+}
+
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  color: var(--text-dark);
+  background-color: var(--neutral-50);
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-2);
+  color: var(--text-dark);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+a {
+  color: var(--secondary-500);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary-700);
+  text-decoration: underline;
+}
+
+/* Common Utilities */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--primary-500);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-600);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-500);
+  color: var(--text-light);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-600);
+}
+
+.btn-accent {
+  background-color: var(--accent-500);
+  color: var(--text-dark);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-600);
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-body {
+  padding: var(--space-2);
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: var(--space-2);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-weight: var(--font-weight-medium);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-1);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--secondary-500);
+  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+/* Leaflet Map Adjustments */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.leaflet-popup-content {
+  margin: var(--space-1) var(--space-2);
+  font-family: var(--font-family);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .container {
+    padding: 0 var(--space-1);
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: var(--font-size-sm);
+  }
+  
+  .btn {
+    width: 100%;
+    margin-bottom: var(--space-1);
+  }
+}
