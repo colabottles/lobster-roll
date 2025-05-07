@@ -99,7 +99,6 @@ import { Subscription } from 'rxjs';
     .shack-count {
       color: var(--text-dark);
       font-size: var(--font-size-sm);
-
     }
 
     .loading, .no-results {

@@ -210,7 +210,7 @@ import { FooterComponent } from '../footer/footer.component';
 
     .stars {
       color: var(--error-900);
-      margin-right: var(--space-1);
+      margin-right: 4px;
     }
 
     .rating-value {
