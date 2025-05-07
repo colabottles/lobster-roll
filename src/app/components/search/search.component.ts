@@ -154,9 +154,9 @@ import { MapService } from '../../services/map.service';
     }
 
     .filter-group label {
-      font-size: var(--font-size-md);
-      font-weight: var(--font-weight-bold);
-      color: var(--text-muted);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-medium);
+      color: var(--text-dark);
     }
 
     .filter-buttons {
