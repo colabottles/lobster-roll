@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
     <div class="list-container">
       <div class="list-header">
         <h2>Lobster Roll Shacks</h2>
-        <h3 class="shack-count">{{ shacks.length }} found</h3>
+        <span class="shack-count">{{ shacks.length }} found</span>
       </div>
       
       <div *ngIf="loading" class="loading">
@@ -97,8 +97,9 @@ import { Subscription } from 'rxjs';
     }
 
     .shack-count {
-      color: var(--text-muted);
+      color: var(--text-dark);
       font-size: var(--font-size-sm);
+
     }
 
     .loading, .no-results {
