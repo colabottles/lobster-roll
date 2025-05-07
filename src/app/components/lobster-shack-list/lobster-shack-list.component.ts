@@ -203,7 +203,7 @@ import { Subscription } from 'rxjs';
     }
 
     .stars {
-      color: var(--warning-700);
+      color: var(--error-900);
       margin-right: var(--space-1);
     }
 
