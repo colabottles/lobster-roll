@@ -403,7 +403,7 @@ export class LobsterShackDetailComponent implements OnInit {
   shack: LobsterShack | undefined;
   loading = true;
   daysOfWeek = [
-    'Monday', 'Tuesday', 'Wednesday', 'Thursday', 
+    'Monday', 'Tuesday', 'Wednesday', 'Thursday',
     'Friday', 'Saturday', 'Sunday'
   ];
 
@@ -411,7 +411,7 @@ export class LobsterShackDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private lobsterShackService: LobsterShackService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -435,8 +435,8 @@ export class LobsterShackDetailComponent implements OnInit {
     const fullStars = Math.floor(rating);
     const halfStar = rating - fullStars >= 0.5 ? 1 : 0;
     const emptyStars = 5 - fullStars - halfStar;
-    
-    return '★'.repeat(fullStars) + (halfStar ? '⭐' : '') + '☆'.repeat(emptyStars);
+
+    return '★'.repeat(fullStars) + (halfStar ? '⭐' : '') + '⭐'.repeat(emptyStars);
   }
 
   getPriceSymbols(price: number): string {
