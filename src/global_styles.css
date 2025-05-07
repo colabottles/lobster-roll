@@ -310,7 +310,7 @@ a:hover {
 .form-label {
   display: block;
   margin-bottom: var(--space-1);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
 }
 
 .form-control {
