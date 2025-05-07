@@ -204,7 +204,7 @@ import { Subscription } from 'rxjs';
     }
 
     .stars {
-      color: var(--warning-500);
+      color: var(--warning-700);
       margin-right: var(--space-1);
     }
 
