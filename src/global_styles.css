@@ -97,10 +97,6 @@
   --text-light: #ffffff;
   --text-muted: #718096;
 
-  /* dark/light colors */
-  --color-dark: #000;
-  --color-light: #fff;
-
   /* Spacing system (8px grid) */
   --space-1: 0.5rem;
   /* 8px */

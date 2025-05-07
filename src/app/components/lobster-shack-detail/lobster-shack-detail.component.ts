@@ -209,7 +209,7 @@ import { FooterComponent } from '../footer/footer.component';
     }
 
     .stars {
-      color: var(--color-dark);
+      color: var(--accent-900);
       margin-right: 4px;
     }
 
