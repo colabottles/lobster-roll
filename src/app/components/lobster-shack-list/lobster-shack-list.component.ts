@@ -214,7 +214,7 @@ import { Subscription } from 'rxjs';
     }
 
     .review-count {
-      color: var(--text-muted);
+      color: var(--text-dark);
       font-size: var(--font-size-sm);
     }
 
@@ -232,7 +232,7 @@ import { Subscription } from 'rxjs';
 
     .distance {
       font-size: var(--font-size-sm);
-      color: var(--text-muted);
+      color: var(--text-dark);
     }
 
     .tags {
