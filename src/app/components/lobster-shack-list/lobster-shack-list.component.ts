@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
     <div class="list-container">
       <div class="list-header">
         <h2>Lobster Roll Shacks</h2>
-        <p class="shack-count">{{ shacks.length }} found</p>
+        <h3 class="shack-count">{{ shacks.length }} found</h3>
       </div>
       
       <div *ngIf="loading" class="loading">
