@@ -154,8 +154,8 @@ import { MapService } from '../../services/map.service';
     }
 
     .filter-group label {
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-medium);
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-bold);
       color: var(--text-muted);
     }
 
@@ -233,9 +233,9 @@ export class SearchComponent implements OnInit {
   constructor(
     private lobsterShackService: LobsterShackService,
     private mapService: MapService
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   search(): void {
     if (this.searchQuery.trim() !== '') {
