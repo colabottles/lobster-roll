@@ -39,7 +39,7 @@ import { CommonModule } from '@angular/common';
   `,
   styles: [`
     .header {
-      background-color: var(--primary-700);
+      background-color: var(--primary-500);
       color: var(--text-light);
       box-shadow: var(--shadow-md);
       position: sticky;
