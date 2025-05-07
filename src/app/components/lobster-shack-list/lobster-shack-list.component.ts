@@ -267,7 +267,7 @@ import { Subscription } from 'rxjs';
     }
 
     .view-btn {
-      background-color: var(--primary-500);
+      background-color: var(--primary-700);
       color: white;
     }
 
