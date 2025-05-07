@@ -12,7 +12,7 @@ import { MapService } from '../../services/map.service';
     <div class="search-container">
       <div class="search-bar">
         <div class="search-input-container">
-          <label>Search for Lobster Shacks</label>
+          <label>Search</label>
           <input 
             type="text" 
             class="search-input" 
@@ -101,7 +101,7 @@ import { MapService } from '../../services/map.service';
     }
 
     .search-input {
-      width: 100%;
+      width: 90lvw;
       padding: var(--space-1) var(--space-1) var(--space-1) var(--space-2);
       border-radius: var(--radius-md);
       border: 2px solid var(--neutral-200);
