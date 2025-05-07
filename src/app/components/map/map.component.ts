@@ -200,35 +200,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       iconAnchor: [20, 40]
     });
 
-    // Create style for custom markers
-    const markerStyle = document.createElement('style');
-    markerStyle.textContent = `
-      .custom-marker {
-        width: 40px;
-        height: 40px;
-        background-color: var(--primary-500);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        border: 2px solid white;
-        transition: transform 0.2s ease;
-      }
-      .custom-marker:hover {
-        transform: scale(1.1);
-      }
-      .custom-marker span {
-        font-size: 1.5rem;
-      }
-      .highlighted-marker {
-        transform: scale(1.2);
-        background-color: var(--accent-500);
-        z-index: 1000 !important;
-      }
-    `;
-    document.head.appendChild(markerStyle);
-
     // Add markers for each shack
     shacks.forEach(shack => {
       const marker = L.marker([shack.location.lat, shack.location.lng], { icon: customIcon })
@@ -247,51 +218,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
           <button class="view-details-btn">View Details</button>
         </div>
       `;
-      
-      // Add popup style
-      const popupStyle = document.createElement('style');
-      popupStyle.textContent = `
-        .popup-content {
-          padding: 0.5rem;
-          font-family: var(--font-family);
-        }
-        .popup-content h3 {
-          margin: 0 0 0.5rem 0;
-          color: var(--primary-600);
-        }
-        .rating {
-          color: var(--warning-500);
-          margin-bottom: 0.5rem;
-        }
-        .rating span {
-          color: var(--text-dark);
-          margin-left: 0.25rem;
-        }
-        .price {
-          color: var(--success-600);
-          margin-bottom: 0.25rem;
-        }
-        .distance {
-          font-size: 0.875rem;
-          color: var(--text-muted);
-          margin-bottom: 0.5rem;
-        }
-        .view-details-btn {
-          background-color: var(--secondary-500);
-          color: white;
-          border: none;
-          padding: 0.5rem;
-          border-radius: 0.25rem;
-          cursor: pointer;
-          width: 100%;
-          font-family: var(--font-family);
-          transition: background-color 0.2s ease;
-        }
-        .view-details-btn:hover {
-          background-color: var(--secondary-600);
-        }
-      `;
-      document.head.appendChild(popupStyle);
       
       // Bind popup to marker
       marker.bindPopup(popupContent);
@@ -330,32 +256,6 @@ export class MapComponent implements OnInit, AfterViewInit, OnDestroy {
       iconSize: [30, 30],
       iconAnchor: [15, 30]
     });
-
-    // Create style for user marker
-    const userMarkerStyle = document.createElement('style');
-    userMarkerStyle.textContent = `
-      .user-marker {
-        width: 30px;
-        height: 30px;
-        background-color: var(--secondary-500);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-        border: 2px solid white;
-        animation: pulse 2s infinite;
-      }
-      .user-marker span {
-        font-size: 1rem;
-      }
-      @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
-      }
-    `;
-    document.head.appendChild(userMarkerStyle);
 
     // Add user location marker
     const userMarker = L.marker([location.lat, location.lng], { icon: userIcon })
