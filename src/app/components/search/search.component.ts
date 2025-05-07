@@ -12,10 +12,11 @@ import { MapService } from '../../services/map.service';
     <div class="search-container">
       <div class="search-bar">
         <div class="search-input-container">
+          <label>Search for Lobster Shacks</label>
           <input 
             type="text" 
             class="search-input" 
-            placeholder="Find lobster roll shacks..." 
+            placeholder="e.g., The Lobster Shack, Portland, Maine..." 
             [(ngModel)]="searchQuery"
             (keyup.enter)="search()"
           >
