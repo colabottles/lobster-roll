@@ -14,7 +14,7 @@ import { Subscription } from 'rxjs';
     <div class="list-container">
       <div class="list-header">
         <h2>Lobster Roll Shacks</h2>
-        <span class="shack-count">{{ shacks.length }} found</span>
+        <p class="shack-count">{{ shacks.length }} found</p>
       </div>
       
       <div *ngIf="loading" class="loading">
@@ -300,7 +300,7 @@ export class LobsterShackListComponent implements OnInit, OnDestroy {
     private lobsterShackService: LobsterShackService,
     private mapService: MapService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     // Load initial shacks
@@ -326,7 +326,7 @@ export class LobsterShackListComponent implements OnInit, OnDestroy {
     const fullStars = Math.floor(rating);
     const halfStar = rating - fullStars >= 0.5 ? 1 : 0;
     const emptyStars = 5 - fullStars - halfStar;
-    
+
     return '★'.repeat(fullStars) + (halfStar ? '⭐' : '') + '☆'.repeat(emptyStars);
   }
 
